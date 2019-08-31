@@ -1,67 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Exercise 3</title>
+    <title>Exercise 4</title>
 </head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 <body>
     <center>
-        <h1>Daftar Planet</h1>
+        <h1>Final Project</h1>
     </center>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Height </th>
-        </thead>
-        <tbody id="tbody">
-        </tbody>
-    </table>
-
-    <script>
-            function getId(id){
-                return document.getElementById(id);
-            }
-       
-            function append(parent, el){
-                return parent.appendChild(el);
-            }
-       
-            function createNode(element) {
-                return document.createElement(element);
-            }
-       
-            function getTag(parent, tag) {
-                return getElementsByTagName(tag)
-            }
-       
-            var tbody=getId('tbody')
-            fetch('https://swapi.co/api/people/')
-               .then((d) => d.json())  
-               
-               .then((people) => {
-                const {results}=people
-                   for(var i=0; i<results.length; i++) {
-                       const{name, height, mass} = results[i]
-                       var tr=createNode('tr')
-                       tr.setAttribute('id',i)
-                       tbody.appendChild(tr)
-                       for(var y=0; y<2; y++) {
-                           var abc=getId('td')
-                           const key=[name, height]
-                           var textnode=document.createTextNode(key[y]);
-                           td.appendChild(textnode);
-                           abc.appendChild(td)
-       
-                       } 
-                   }
-               }
-            )  
-               
-       </script>
-       
-       
-
 </body>
-
 </html>
